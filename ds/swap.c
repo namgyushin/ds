@@ -13,7 +13,7 @@ void swap(int *pa, int *pb)
 	*pa = *pb;
 	*pb = temp;
 }
-
+// tst
 int main(void)
 {
 	int a, b;
