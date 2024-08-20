@@ -1,44 +1,51 @@
 #include "stack.h"
 #include <stdlib.h>
+#include <assert.h>
 #include <stdio.h>
 
-void initStack(Stack *ps)
+void initStack(Stack *ps, int size)
 {
+	ps->pArr = malloc(sizeof(int) * size);
+	ps->size = size;
 	ps->tos = 0;
+	
+}
+
+void cleanupStack(Stack *ps)
+{
+	free(ps->pArr);
 }
 
 void push(Stack *ps, int data)
 {
-	//stack[tos] = data;
-	//++tos;
+
 	
-	//s.array[s.tos] = data;
-	//++s.tos;
-	
-	if (ps->tos == STACKSIZE)
+/*	if (ps->tos == ps->size)
 	{
 		fprintf(stdout, "stack isfull\n");
 		exit(1);
 	}
+*/	
+
+	assert(ps->tos != ps->size);
 	
-	ps->array[ps->tos] = data;
+	ps->pArr[ps->tos] = data;
 	++ps->tos;
 }
 
 int pop(Stack *ps)
 {
-	//--tos;
-	//return stack[tos];
-	
-	//--s.tos;
-	//return s.array[s.tos];
-	
-	if (os->tos == 0)
+
+/*	if (ps->tos == 0)
 	{
 		fprintf(stdout, "stack is empty\n");
 		exit(2);
 	}
+*/	
+
+	assert(ps->tos != 0);
+	
 	--ps->tos;
-	return ps->array[ps->tos];
+	return ps->pArr[ps->tos];
 }
 

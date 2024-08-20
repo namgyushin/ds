@@ -1,7 +1,7 @@
 #define STACKSIZE 100
 
-int stack[STACKSIZE];
-int tos;					//top of stack
+static int stack[STACKSIZE];
+static int tos;					//top of stack
 
 
 void push(int data)		//func. definition
