@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "stack.h"
 
-
 int main(void)
 {
 	Stack s1, s2;
