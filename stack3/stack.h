@@ -9,9 +9,6 @@ typedef struct
 }Stack;
 
 void initStack(Stack *ps);
-
-//void push(Stack s, int data);
-//int pop(Stack s);
 void push(Stack *ps, int data);
 int pop(Stack *ps);
 
