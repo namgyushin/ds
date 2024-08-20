@@ -33,7 +33,7 @@ int pop(Stack *ps)
 	//--s.tos;
 	//return s.array[s.tos];
 	
-	if (os->tos == 0)
+	if (ps->tos == 0)
 	{
 		fprintf(stdout, "stack is empty\n");
 		exit(2);
