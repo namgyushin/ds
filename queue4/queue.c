@@ -6,6 +6,12 @@
 void initQueue(Queue *ps, int size)
 {
 	ps->pArr = malloc(sizeof(int) * size);
+	// if (ps->pArr == NULL)
+	// {
+	// 	//
+	// }
+	assert(ps->pArr);
+
 	ps->size = size;
 	ps->rear = 0;
 	ps->front = 0;
@@ -18,7 +24,7 @@ void cleanupQueue(Queue *ps)
 
 void push(Queue *ps, int data)
 {
-/*	if (ps->rear == QUEUESIZE)
+/*	if (ps->rear == ps->size)
 	{
 		fprintf(stdout, "queue isfull\n");
 		exit(1);
@@ -32,12 +38,12 @@ void push(Queue *ps, int data)
 
 int pop(Queue *ps)
 {
-/*	if (ps->front == QUEUESIZE)
+/*	if (ps->rear == ps->front)
 		{
 			fprintf(stdout, "stack is empty\n");
 			exit(2);
 		}	
 */
-	assert(ps->front != ps->size);
+	assert(ps->front != ps->rear);
 	return ps->pArr[ps->front++];
 }

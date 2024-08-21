@@ -18,12 +18,14 @@ int main(void)
 	printf("s1 2nd pop() : %d\n", pop(&s1));
 	printf("s1 3st pop() : %d\n", pop(&s1));
 	
-	push(&s2, 100);
-	push(&s2, 200);
+	//pop(&s1);
+
+	push(&s2, 900);
+	push(&s2, 800);
 	
 	printf("s2 1st pop() : %d\n", pop(&s2));
 	
-	push(&s2, 300);
+	push(&s2, 700);
 	
 	printf("s2 2nd pop() : %d\n", pop(&s2));
 	printf("s2 3st pop() : %d\n", pop(&s2));

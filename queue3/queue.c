@@ -12,7 +12,7 @@ void push(Queue *ps, int data)
 {
 	if (ps->rear == QUEUESIZE)
 	{
-		fprintf(stdout, "queue isfull\n");
+		fprintf(stderr, "queue is full\n");
 		exit(1);
 	}
 	
@@ -22,9 +22,9 @@ void push(Queue *ps, int data)
 
 int pop(Queue *ps)
 {
-	if (ps->front == QUEUESIZE)
+	if (ps->rear == ps->front)
 		{
-			fprintf(stdout, "stack is empty\n");
+			fprintf(stdout, "queue is empty\n");
 			exit(2);
 		}	
 

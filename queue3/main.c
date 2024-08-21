@@ -20,6 +20,8 @@ int main(void)
 	printf("s1 2nd pop() : %d\n", pop(&s1));
 	printf("s1 3st pop() : %d\n", pop(&s1));
 	
+	//pop(&s1);
+
 	push(&s2, 900);
 	push(&s2, 800);
 	
