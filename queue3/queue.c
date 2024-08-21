@@ -1,6 +1,6 @@
-#include "queue.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "queue.h"
 
 void initQueue(Queue *ps)
 {
